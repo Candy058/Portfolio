@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI & Robotics Portfolio</title>
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Personal portfolio of an AI and Robotics student focusing on computer vision, embedded systems, and simulation."
+    />
+    <meta
+      name="keywords"
+      content="AI, robotics, computer vision, machine learning, embedded systems, simulation, portfolio"
+    />
+    <meta name="author" content="Your Name" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span><span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="section hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="hero-kicker">Portfolio</p>
+            <h1 class="hero-title">Your Name</h1>
+            <p class="hero-tagline">AI • Robotics • Computer Vision</p>
+            <p class="hero-subtitle">
+              Building intelligent systems that bridge perception and action —
+              from deep learning models to real-world robotic platforms.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn primary">View Projects</a>
+              <a
+                href="https://github.com/your-github"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn ghost"
+                >GitHub</a
+              >
+              <a
+                href="assets/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn ghost"
+                >Resume</a
+              >
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-card">
+              <div class="hero-badge">Student • Researcher • Builder</div>
+              <p>
+                Interests in robot perception, model-based control, and
+                learning-enabled autonomy.
+              </p>
+              <ul>
+                <li>Vision-based state estimation</li>
+                <li>Embedded ML on constrained hardware</li>
+                <li>Simulation-driven design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>About</h2>
+            <p>AI, robotics, and hardware-centric systems engineering.</p>
+          </header>
+          <div class="grid two">
+            <div>
+              <p>
+                I am an AI and Robotics student focused on building end-to-end
+                robotic systems that tightly couple perception, decision-making,
+                and actuation. My work spans computer vision, deep learning, and
+                embedded control, with a strong emphasis on experimental
+                validation.
+              </p>
+              <p>
+                Recently, I have been exploring vision-based fruit counting and
+                quality assessment, depth reconstruction under motion blur, and
+                terrain-aware planning from 3D point clouds. I enjoy working
+                across the full stack: dataset design, model training,
+                simulation, and deployment on microcontrollers and SBCs.
+              </p>
+            </div>
+            <div>
+              <div class="about-list">
+                <div>
+                  <h3>Focus Areas</h3>
+                  <ul>
+                    <li>Object detection & tracking</li>
+                    <li>Depth & 3D reconstruction</li>
+                    <li>Planning under perception uncertainty</li>
+                    <li>Soft robotics and compliant actuation</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3>Current Goals</h3>
+                  <ul>
+                    <li>Robust vision pipelines for field robotics</li>
+                    <li>Real-time ML on embedded platforms</li>
+                    <li>Simulation-to-reality transfer for soft actuators</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <header class="section-header">
+            <h2>Projects</h2>
+            <p>
+              Selected projects combining perception, learning, and physical
+              systems.
+            </p>
+          </header>
+          <div class="grid three project-grid">
+            <!-- Project card 1 -->
+            <article class="card project-card fade-in">
+              <div class="card-media placeholder-media">
+                <span>Image / Video</span>
+              </div>
+              <div class="card-body">
+                <h3>
+                  Hybrid Grape Counting System (YOLOv8 + CNN + FNN)
+                </h3>
+                <p>
+                  A hybrid pipeline for robust grape cluster detection and yield
+                  estimation in vineyard environments under varying lighting and
+                  occlusion.
+                </p>
+                <p class="tagline-small">
+                  YOLOv8 + CNN feature extraction + fully connected regression
+                  for per-image count prediction.
+                </p>
+                <div class="card-meta">
+                  <span>Computer Vision</span>
+                  <span>Field Robotics</span>
+                </div>
+                <div class="card-links">
+                  <a href="projects/grape-counting.html" class="text-link"
+                    >View details</a
+                  >
+                  <a
+                    href="https://github.com/your-github/grape-counting"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link subtle"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project card 2 -->
+            <article class="card project-card fade-in">
+              <div class="card-media placeholder-media">
+                <span>Image / Video</span>
+              </div>
+              <div class="card-body">
+                <h3>Motion Blur Depth Camera Reconstruction</h3>
+                <p>
+                  Experimental study on reconstructing reliable depth from
+                  active depth cameras operating under significant motion blur
+                  and dynamic scenes.
+                </p>
+                <p class="tagline-small">
+                  Combines physical modeling with learned priors for depth
+                  recovery.
+                </p>
+                <div class="card-meta">
+                  <span>Depth Estimation</span>
+                  <span>Research</span>
+                </div>
+                <div class="card-links">
+                  <a
+                    href="projects/motion-blur-depth.html"
+                    class="text-link"
+                    >View details</a
+                  >
+                  <a
+                    href="https://github.com/your-github/motion-blur-depth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link subtle"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project card 3 -->
+            <article class="card project-card fade-in">
+              <div class="card-media placeholder-media">
+                <span>Image / Video</span>
+              </div>
+              <div class="card-body">
+                <h3>Soft Pneumatic Actuator Simulation</h3>
+                <p>
+                  Finite element simulation of soft pneumatic actuators
+                  capturing nonlinear material behavior and pressure-driven
+                  deformation.
+                </p>
+                <p class="tagline-small">
+                  Workflows in ABAQUS/ANSYS for rapid iteration on actuator
+                  geometries.
+                </p>
+                <div class="card-meta">
+                  <span>Soft Robotics</span>
+                  <span>Simulation</span>
+                </div>
+                <div class="card-links">
+                  <a
+                    href="projects/soft-actuator-simulation.html"
+                    class="text-link"
+                    >View details</a
+                  >
+                  <a
+                    href="https://github.com/your-github/soft-actuator-sim"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link subtle"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project card 4 -->
+            <article class="card project-card fade-in">
+              <div class="card-media placeholder-media">
+                <span>Image / Video</span>
+              </div>
+              <div class="card-body">
+                <h3>Raspberry Pi Fruit Segregation System</h3>
+                <p>
+                  End-to-end embedded system for real-time fruit classification
+                  and segregation using a Raspberry Pi and low-cost camera.
+                </p>
+                <p class="tagline-small">
+                  Lightweight CNNs optimized for on-device inference.
+                </p>
+                <div class="card-meta">
+                  <span>Embedded Vision</span>
+                  <span>Edge ML</span>
+                </div>
+                <div class="card-links">
+                  <a
+                    href="projects/raspberry-pi-fruit.html"
+                    class="text-link"
+                    >View details</a
+                  >
+                  <a
+                    href="https://github.com/your-github/raspberry-pi-fruit"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link subtle"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project card 5 -->
+            <article class="card project-card fade-in">
+              <div class="card-media placeholder-media">
+                <span>Image / Video</span>
+              </div>
+              <div class="card-body">
+                <h3>Terrain-Aware Path Planning from Point Clouds</h3>
+                <p>
+                  Planning framework that converts 3D point clouds into
+                  traversability maps for terrain-aware navigation.
+                </p>
+                <p class="tagline-small">
+                  Fuses geometric features with learned cost maps.
+                </p>
+                <div class="card-meta">
+                  <span>Planning</span>
+                  <span>3D Perception</span>
+                </div>
+                <div class="card-links">
+                  <a
+                    href="projects/terrain-aware-planning.html"
+                    class="text-link"
+                    >View details</a
+                  >
+                  <a
+                    href="https://github.com/your-github/terrain-planning"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-link subtle"
+                    >GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section id="research" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Research</h2>
+            <p>Publications, reports, and technical write-ups.</p>
+          </header>
+          <div class="research-list">
+            <article class="research-item">
+              <h3>
+                <span class="paper-title"
+                  >Robust Grape Yield Estimation using Hybrid Detection and
+                  Regression</span
+              >
+            </h3>
+            <p class="paper-authors">Your Name, Collaborator Name</p>
+            <p class="paper-venue">
+              Technical Report, Department / Lab, 2025
+            </p>
+            <p class="paper-abstract">
+              Explores a hybrid pipeline combining object detection and
+              regression-based counting for accurate yield estimation in
+              challenging vineyard conditions.
+            </p>
+            <div class="paper-links">
+              <a href="assets/papers/grape-yield.pdf" class="text-link"
+                >PDF</a
+              >
+            </div>
+          </article>
+
+          <article class="research-item">
+            <h3>
+              <span class="paper-title"
+                >Depth Reconstruction under Motion Blur for Active Depth
+                Sensors</span
+              >
+            </h3>
+            <p class="paper-authors">Your Name, Collaborator Name</p>
+            <p class="paper-venue">Project Report, 2024</p>
+            <p class="paper-abstract">
+              Investigates the limits of active depth sensing under high-speed
+              motion and proposes reconstruction strategies that fuse temporal
+              information and learned priors.
+            </p>
+            <div class="paper-links">
+              <a href="assets/papers/motion-blur-depth.pdf" class="text-link"
+                >PDF</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <header class="section-header">
+            <h2>Skills</h2>
+            <p>Tools and technologies I use frequently.</p>
+          </header>
+          <div class="grid five skills-grid">
+            <div class="card skill-card">
+              <h3>ML / AI</h3>
+              <ul>
+                <li>PyTorch, TensorFlow</li>
+                <li>YOLOv8, Detectron-style detectors</li>
+                <li>CNNs, FNNs, basic RNNs/Transformers</li>
+                <li>Classical ML (SVMs, RFs, XGBoost)</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Robotics</h3>
+              <ul>
+                <li>Robot kinematics & dynamics</li>
+                <li>ROS / ROS 2 basics</li>
+                <li>Sensor fusion & calibration</li>
+                <li>Path planning & control</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Embedded</h3>
+              <ul>
+                <li>Raspberry Pi, Jetson, Arduino</li>
+                <li>C / C++, Python on SBCs</li>
+                <li>SPI / I2C / UART peripherals</li>
+                <li>On-device optimization & quantization</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Simulation</h3>
+              <ul>
+                <li>ABAQUS, ANSYS</li>
+                <li>Gazebo / basic physics simulators</li>
+                <li>Finite element analysis workflows</li>
+                <li>Soft body modeling concepts</li>
+              </ul>
+            </div>
+            <div class="card skill-card">
+              <h3>Tools</h3>
+              <ul>
+                <li>Git, GitHub</li>
+                <li>Linux, shell scripting</li>
+                <li>NumPy, SciPy, OpenCV</li>
+                <li>LaTeX, Python notebooks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Contact</h2>
+            <p>Feel free to reach out for collaboration or opportunities.</p>
+          </header>
+          <div class="contact-grid">
+            <div>
+              <ul class="contact-list">
+                <li>
+                  <span>Email</span>
+                  <a href="mailto:your.email@example.com"
+                    >your.email@example.com</a
+                  >
+                </li>
+                <li>
+                  <span>GitHub</span>
+                  <a
+                    href="https://github.com/your-github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >github.com/your-github</a
+                  >
+                </li>
+                <li>
+                  <span>LinkedIn</span>
+                  <a
+                    href="https://www.linkedin.com/in/your-linkedin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >linkedin.com/in/your-linkedin</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="contact-note">
+              <p>
+                I am particularly interested in research-oriented internships
+                and projects at the intersection of perception, control, and
+                hardware. If you are working on field robotics, agricultural
+                robotics, or soft robotic manipulation, I would love to connect.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>AI • Robotics • Computer Vision</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terrain-Aware Path Planning • Project</title>
+    <meta
+      name="description"
+      content="Terrain-aware path planning from point clouds for mobile robots."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href("../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Planning • 3D Perception</p>
+          <h1 class="project-title">
+            Terrain-Aware Path Planning from Point Clouds
+          </h1>
+          <p class="project-tagline">
+            A planning framework that converts raw 3D point clouds into
+            traversability-aware cost maps, enabling safer navigation over varied
+            terrain.
+          </p>
+          <div class="project-meta">
+            <span>Point Clouds</span>
+            <span>Cost Maps</span>
+            <span>Mobile Robotics</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/terrain-planning"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Traditional 2D planners assume flat terrain, which can cause
+                unsafe or inefficient behavior in outdoor environments with slopes
+                obstacles, or rough surfaces. The challenge is to use 3D
+                information from LiDAR or depth sensors to inform path planning
+                decisions.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <ul>
+                <li>
+                  Preprocess raw point clouds to remove ground plane outliers and
+                  noise.
+                </li>
+                <li>
+                  Compute geometric features such as slope, roughness, and height
+                  variance in local patches.
+                </li>
+                <li>
+                  Map these features into a 2.5D grid-based representation with
+                  a traversability cost for each cell.
+                </li>
+                <li>
+                  Use the cost map with a standard planner (e.g., A*, D*, or
+                  sampling-based) to produce terrain-aware paths.
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                The planner avoids highly sloped or rough regions that would be
+                difficult for the robot to traverse, preferring more stable
+                routes even when they are slightly longer. Visualization of the
+                cost map and resulting paths helps interpret the planner's
+                behavior.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>Python / C++</li>
+                <li>Point cloud libraries (PCL, Open3D)</li>
+                <li>ROS / ROS 2 integration for live planning</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">3D Views</span>
+            </div>
+            <div class="media-body">
+              <p>
+                Use this area to show point cloud visualizations, cost map
+                overlays, and planned paths rendered in RViz or a custom viewer.
+              </p>
+            </div>
+            <p class="media-caption">
+              Embed static figures or fly-through videos demonstrating the
+              planner behavior over different terrains.
+            </p>
+            <div class="project-section">
+              <h3>Applications</h3>
+              <ul>
+                <li>Outdoor ground robots and UGVs.</li>
+                <li>Agricultural robotics and off-road navigation.</li>
+                <li>Exploration tasks with limited prior maps.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>Terrain-Aware Path Planning</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
+

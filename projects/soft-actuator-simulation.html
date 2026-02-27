@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soft Pneumatic Actuator Simulation • Project</title>
+    <meta
+      name="description"
+      content="Finite element simulation of soft pneumatic actuators using ABAQUS/ANSYS."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href="../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Soft Robotics • Simulation</p>
+          <h1 class="project-title">Soft Pneumatic Actuator Simulation</h1>
+          <p class="project-tagline">
+            Finite element models of soft pneumatic actuators that capture
+            nonlinear material behavior and pressure-driven deformation, enabling
+            rapid iteration on actuator design.
+          </p>
+          <div class="project-meta">
+            <span>Finite Element Analysis</span>
+            <span>Hyperelastic Materials</span>
+            <span>Design Iteration</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/soft-actuator-sim"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Soft pneumatic actuators offer compliant, safe interaction but are
+                challenging to design due to their nonlinear, highly coupled
+                behavior. Building and testing physical prototypes is time- and
+                material-intensive.
+              </p>
+              <p>
+                The aim of this project is to build simulation models that can
+                predict actuator deformation under pressure, guiding geometry and
+                material choices before fabrication.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <ul>
+                <li>
+                  Model actuator geometries (e.g., fiber-reinforced segments,
+                  bellows) in a CAD tool and import into ABAQUS/ANSYS.
+                </li>
+                <li>
+                  Assign hyperelastic material models (e.g., Mooney–Rivlin,
+                  Ogden) fit to experimental stress–strain data.
+                </li>
+                <li>
+                  Apply internal pressure loads and appropriate boundary
+                  conditions to emulate mounting and constraints.
+                </li>
+                <li>
+                  Run static and quasi-static analyses to obtain deformation
+                  profiles, tip displacement, and stress distributions.
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                Simulated deformations qualitatively match the behavior of
+                fabricated prototypes, particularly in predicted bending
+                directions and approximate tip deflections. Stress maps provide
+                insight into regions prone to failure, informing reinforcement and
+                wall thickness decisions.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>ABAQUS / ANSYS for finite element analysis</li>
+                <li>Python scripting for parametric studies</li>
+                <li>CAD tools (e.g., SolidWorks, Fusion 360)</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">Simulation Clips</span>
+            </div>
+            <div class="media-body">
+              <p>
+                Showcase deformation animations here: for example, a
+                pressure-driven bending sequence or comparison between two design
+                variants.
+              </p>
+            </div>
+            <p class="media-caption">
+              This panel is designed for simulation renders or overlaid stress
+              maps exported as <span class="code">.mp4</span> or
+              <span class="code">.png</span> from your FEA software.
+            </p>
+            <div class="project-section">
+              <h3>Design Insights</h3>
+              <ul>
+                <li>Trade-offs between stiffness and range of motion.</li>
+                <li>Effect of fiber angle and chamber geometry.</li>
+                <li>
+                  Use of simulation to narrow down candidate designs before
+                  printing molds.
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>Soft Pneumatic Actuator Simulation</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
+

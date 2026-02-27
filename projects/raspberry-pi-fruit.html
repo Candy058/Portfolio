@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raspberry Pi Fruit Segregation • Project</title>
+    <meta
+      name="description"
+      content="Embedded vision system for real-time fruit classification and segregation using a Raspberry Pi."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href="../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Embedded Vision • Edge ML</p>
+          <h1 class="project-title">Raspberry Pi Fruit Segregation System</h1>
+          <p class="project-tagline">
+            A complete embedded system for real-time fruit classification and
+            physical segregation on a conveyor using a Raspberry Pi and a
+            low-cost camera.
+          </p>
+          <div class="project-meta">
+            <span>Embedded Linux</span>
+            <span>Lightweight CNNs</span>
+            <span>Mechatronics</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/raspberry-pi-fruit"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Many small farms and processing units rely on manual fruit
+                inspection and sorting, which is labor-intensive and inconsistent.
+                Low-cost embedded vision can automate basic grading and
+                segregation tasks, but must run within tight compute and power
+                budgets.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <ul>
+                <li>
+                  Capture top-down images of fruit items on a small conveyor belt
+                  using a Raspberry Pi camera module.
+                </li>
+                <li>
+                  Train a lightweight CNN classifier (e.g., MobileNet-style) to
+                  distinguish fruit type / quality categories.
+                </li>
+                <li>
+                  Deploy the model on the Pi using optimized inference
+                  (<span class="code">tflite</span> or quantized PyTorch).
+                </li>
+                <li>
+                  Trigger actuators (servos or pneumatic pushers) via GPIO to
+                  direct items into bins based on the classifier output.
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                The system achieves real-time inference on the Raspberry Pi with
+                acceptable latency for conveyor speeds used in the prototype.
+                Classification accuracy is sufficient for coarse sorting tasks
+                (e.g., ripe vs. unripe, or defect vs. no defect).
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>Raspberry Pi (Linux), Python</li>
+                <li>OpenCV for image capture and preprocessing</li>
+                <li>Lightweight CNN (PyTorch / TensorFlow Lite)</li>
+                <li>GPIO control for actuators</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">Hardware Demo</span>
+            </div>
+            <div class="media-body">
+              <p>
+                Add a short hardware demo here: overview of the conveyor, camera,
+                and sorting mechanism, plus example classification overlays.
+              </p>
+            </div>
+            <p class="media-caption">
+              Ideal for an embedded system walkthrough video or annotated photos
+              of the setup.
+            </p>
+            <div class="project-section">
+              <h3>Deployment Notes</h3>
+              <ul>
+                <li>Model quantization and input resizing for speed.</li>
+                <li>Simple watchdog and logging on the Pi.</li>
+                <li>Enclosure considerations for industrial environments.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>Raspberry Pi Fruit Segregation</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
+

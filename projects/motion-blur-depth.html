@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motion Blur Depth Reconstruction • Project</title>
+    <meta
+      name="description"
+      content="Research project on reconstructing reliable depth from active depth cameras under motion blur."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href="../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Depth Sensing • Research</p>
+          <h1 class="project-title">
+            Motion Blur Depth Camera Reconstruction
+          </h1>
+          <p class="project-tagline">
+            Experimental study of the limits of active depth sensors operating
+            under motion blur, and reconstruction strategies that combine
+            physical modeling with learned priors.
+          </p>
+          <div class="project-meta">
+            <span>Active Depth Sensors</span>
+            <span>Temporal Fusion</span>
+            <span>Neural Reconstruction</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/motion-blur-depth"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+            <a href="../assets/papers/motion-blur-depth.pdf" class="btn ghost"
+              >Read report (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Depth cameras are widely used for robotics, AR/VR, and 3D
+                reconstruction. However, their performance degrades significantly
+                when the camera or scene is in motion, leading to motion blur and
+                invalid or noisy depth estimates.
+              </p>
+              <p>
+                This project investigates the failure modes of active depth
+                sensors under motion blur and explores reconstruction methods that
+                can restore stable depth maps by fusing temporal information and
+                learned priors.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <p>The work combines experimental evaluation and reconstruction:</p>
+              <ul>
+                <li>
+                  Design a motion rig to precisely control camera speed and
+                  trajectory while capturing RGB-D sequences.
+                </li>
+                <li>
+                  Characterize sensor failure as a function of motion magnitude,
+                  direction, and scene structure using quantitative metrics and
+                  qualitative analysis.
+                </li>
+                <li>
+                  Implement reconstruction pipelines that combine:
+                  <ul>
+                    <li>Temporal depth fusion with optical flow alignment.</li>
+                    <li>
+                      Learned priors via a CNN that inpaints missing or low
+                      confidence regions.
+                    </li>
+                    <li>
+                      Optional regularization using smoothness and edge-aware
+                      losses.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                Reconstruction significantly reduces the fraction of invalid depth
+                pixels and improves depth continuity in high-motion regimes,
+                particularly along object boundaries. Temporal fusion helps
+                recover structure where individual frames fail, at the cost of
+                some latency.
+              </p>
+              <p>
+                The experiments highlight regimes where current sensors are
+                unreliable (fast lateral motion, low texture) and inform practical
+                design choices for robot motion planning and sensor placement.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>Python, PyTorch</li>
+                <li>Active depth camera (e.g., Intel RealSense)</li>
+                <li>Optical flow estimation (RAFT-style or similar)</li>
+                <li>Numpy, SciPy, OpenCV for analysis and visualization</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">Sequences</span>
+            </div>
+            <div class="media-body">
+              <p>
+                Use this area for side-by-side RGB, raw depth, and reconstructed
+                depth videos or image grids illustrating failure modes and
+                improvements.
+              </p>
+            </div>
+            <p class="media-caption">
+              You can embed synchronized videos
+              <span class="code">&lt;video controls muted loop&gt;</span> or
+              animated GIFs exported from your depth viewer here.
+            </p>
+            <div class="project-section">
+              <h3>Key Insights</h3>
+              <ul>
+                <li>Motion blur interacts with active illumination patterns.</li>
+                <li>
+                  Temporal reconstruction can recover structure but adds
+                  computational load.
+                </li>
+                <li>Sensor calibration and exposure tuning are critical.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>Motion Blur Depth Reconstruction</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
+

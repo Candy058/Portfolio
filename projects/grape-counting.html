@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hybrid Grape Counting System • Project</title>
+    <meta
+      name="description"
+      content="Hybrid grape counting system using YOLOv8, CNN features, and fully connected regression for vineyard yield estimation."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href="../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Computer Vision • Field Robotics</p>
+          <h1 class="project-title">
+            Hybrid Grape Counting System (YOLOv8 + CNN + FNN)
+          </h1>
+          <p class="project-tagline">
+            A hybrid pipeline for robust grape cluster detection and yield
+            estimation in vineyard environments with varying lighting, occlusion,
+            and camera viewpoints.
+          </p>
+          <div class="project-meta">
+            <span>Object Detection</span>
+            <span>Regression</span>
+            <span>Real-world Data</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/grape-counting"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+            <a href="../assets/papers/grape-yield.pdf" class="btn ghost"
+              >Read report (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Accurate yield estimation is critical for vineyard management,
+                logistics, and pricing. Manual grape counting is time-consuming,
+                subjective, and difficult to scale across large fields. Pure
+                detection-based approaches struggle with heavy occlusion,
+                overlapping clusters, and variable illumination typical of outdoor
+                deployments.
+              </p>
+              <p>
+                The goal of this project is to design a vision system that can
+                reliably estimate grape counts from RGB images collected in-field,
+                without requiring controlled lighting or expensive sensors.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <p>
+                I designed a hybrid architecture that combines object detection
+                with learned regression-based counting:
+              </p>
+              <ul>
+                <li>
+                  Train a YOLOv8 detector to localize grape clusters under
+                  diverse conditions (time of day, occlusion, weather).
+                </li>
+                <li>
+                  Extract deep features from the detector backbone and an
+                  auxiliary CNN trained on image patches.
+                </li>
+                <li>
+                  Feed global and region-level features into a fully connected
+                  network (FNN) that regresses the final per-image grape count.
+                </li>
+                <li>
+                  Augment the training set with heavy photometric and geometric
+                  augmentations to improve robustness to lighting and viewpoint
+                  changes.
+                </li>
+              </ul>
+              <p>
+                The hybrid pipeline allows the model to benefit from detection
+                supervision while also learning global cues correlated with the
+                total grape count, improving performance when some clusters are
+                occluded or only partially visible.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                On a held-out test set of vineyard images, the hybrid model
+                reduced mean absolute error compared to a pure detection + count
+                baseline and a direct image-to-count CNN:
+              </p>
+              <ul>
+                <li>Baseline detector (box count): higher undercount in cluttered scenes.</li>
+                <li>Direct regression CNN: sensitive to domain shift and lighting.</li>
+                <li>
+                  <strong>Hybrid YOLOv8 + CNN + FNN:</strong> lower MAE and more
+                  stable predictions across different vineyard blocks.
+                </li>
+              </ul>
+              <p>
+                Qualitatively, the model shows improved robustness to partial
+                occlusion and overlapping clusters, and can generalize reasonably
+                well to previously unseen rows when trained with appropriate
+                augmentation and data splits.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>Python, PyTorch</li>
+                <li>YOLOv8 for object detection</li>
+                <li>Custom CNN + fully connected regression head</li>
+                <li>OpenCV and Albumentations for preprocessing & augmentation</li>
+                <li>Weights & Biases / TensorBoard for experiment tracking</li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Notes & Extensions</h2>
+              <p>
+                Future work includes exploring uncertainty-aware predictions,
+                semi-supervised learning from unlabeled field data, and
+                integrating geometric constraints (e.g., row structure) into the
+                pipeline. The architecture can also be adapted to other
+                agriculture tasks such as fruit size estimation or yield mapping.
+              </p>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">Images / Videos</span>
+            </div>
+            <div class="media-body">
+              <!-- Replace this placeholder with an image or video tag -->
+              <p>
+                Drop a short qualitative demo here: detection overlays on vineyard
+                images, side-by-side with predicted vs. ground-truth counts.
+              </p>
+            </div>
+            <p class="media-caption">
+              Placeholders are intentionally minimal – replace with
+              <span class="code">&lt;img&gt;</span> or
+              <span class="code">&lt;video controls&gt;</span> elements pointing to
+              files under <span class="code">assets/</span>.
+            </p>
+            <div class="project-section">
+              <h3>Dataset & Training</h3>
+              <ul>
+                <li>Custom vineyard dataset with image-level count labels.</li>
+                <li>Train/val/test split by row to avoid leakage.</li>
+                <li>Random brightness, contrast, and color jitter.</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>Hybrid Grape Counting System</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
+
