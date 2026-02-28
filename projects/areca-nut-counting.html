@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Areca Nut Segmentation, Classifcation & Surface Characterization • Project</title>
+    <meta
+      name="description"
+      content="Vision-based pipeline for segmenting individual areca nuts, classifying quality grades, and analyzing surface characteristics."
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="../index.html#hero" class="logo">AI&nbsp;+&nbsp;Robotics</a>
+        <nav class="nav">
+          <a href="../index.html#projects" class="back-link"
+            ><span>&larr;</span><span>All projects</span></a
+          >
+        </nav>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <span class="theme-icon">☾</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-header">
+        <div class="container">
+          <p class="pill">Computer Vision • Research</p>
+          <h1 class="project-title">
+            Areca Nut Segmentation, Classifcation & Surface Characterization
+          </h1>
+          <p class="project-tagline">
+            Vision-based pipeline for segmenting individual areca nuts, classifying quality grades, and analyzing surface characteristics. 
+          </p>
+          <div class="project-meta">
+            <span>Depth Sensors</span>
+            <span>Object Segmentation</span>
+            <span>Volume Estimation</span>
+          </div>
+          <div class="project-links">
+            <a
+              href="https://github.com/your-github/motion-blur-depth"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn primary"
+              >View on GitHub</a
+            >
+            <a href="../assets/papers/motion-blur-depth.pdf" class="btn ghost"
+              >Read report (PDF)</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="project-layout">
+        <div class="container project-grid-main">
+          <div>
+            <article class="project-section">
+              <h2>Problem</h2>
+              <p>
+                Areca nuts exhibit significant variation in size, shape, 
+                color, and surface texture depending on maturity and quality grade. Manual inspection is 
+                labor-intensive and inconsistent, especially in high-throughput processing environments.
+              </p>
+              <p>
+                The goal of this project was to design a vision-based pipeline capable of: Segmenting individual areca nuts from conveyor imagery, Classifying nuts into quality categories, 
+                Extracting surface-level characteristics (texture, defects, discoloration) and Enabling automated, real-time sorting decisions.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Approach</h2>
+              <ul>
+                <li>
+                  Capture top-view conveyor imagery using a fixed camera setup under controlled lighting.
+                </li>
+                <li>
+                  Train an instance segmentation model (Mask-RCNN) to isolate individual nuts.
+                </li>
+                <li>
+                  Crop segmented instances and feed them into a classification model for grade prediction.
+                </li>
+                <li>
+                  Extract surface descriptors and integrate the pipeline into a near real-time inference loop suitable for embedded deployment.
+                </li>
+              </ul>
+            </article>
+
+            <article class="project-section">
+              <h2>Results</h2>
+              <p>
+                The system successfully isolates individual areca nuts under moderate occlusion and variable lighting conditions. Instance segmentation enables accurate per-object processing. 
+                Surface feature extraction improves separation between visually similar grades. 
+                The modular pipeline allows easy retraining for new quality categories. Designed with deployment constraints in mind for edge hardware environments. 
+                The project demonstrates how combining learned features with engineered surface descriptors improves robustness in agricultural quality assessment tasks.
+              </p>
+            </article>
+
+            <article class="project-section">
+              <h2>Tech Stack</h2>
+              <ul>
+                <li>Python, PyTorch</li>
+                <li>Active depth camera (D435i)</li>
+                <li>Open 3D, OpenCV</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="media-panel">
+            <div class="media-header">
+              <span>Media</span>
+              <span class="pill">Sequences</span>
+            </div>
+            <div class="media-body">
+              <img 
+              src="../assets/areca-class-2.jpeg" 
+              alt="Instance segmentation overlay on areca nuts"
+              />
+            </div>
+            <div class="project-section">
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>&copy; <span id="year"></span> Siddhant Pani</span>
+        <span>Areca Nut Segmentation, Classification & Surface Characterization</span>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
