@@ -74,15 +74,14 @@
                   using a Raspberry Pi camera module.
                 </li>
                 <li>
-                  Train a lightweight CNN classifier (e.g., MobileNet-style) to
+                  Train a lightweight CNN classifier to
                   distinguish fruit type / quality categories.
                 </li>
                 <li>
-                  Deploy the model on the Pi using optimized inference
-                  (<span class="code">tflite</span> or quantized PyTorch).
+                  Deploy the model on the Pi using optimized inference.
                 </li>
                 <li>
-                  Trigger actuators (servos or pneumatic pushers) via GPIO to
+                  Trigger actuators via GPIO to
                   direct items into bins based on the classifier output.
                 </li>
               </ul>
@@ -92,9 +91,7 @@
               <h2>Results</h2>
               <p>
                 The system achieves real-time inference on the Raspberry Pi with
-                acceptable latency for conveyor speeds used in the prototype.
-                Classification accuracy is sufficient for coarse sorting tasks
-                (e.g., ripe vs. unripe, or defect vs. no defect).
+                acceptable latency for conveyor speeds used in the prototype. Technology demonstrator for a field level prototype.
               </p>
             </article>
 
@@ -103,7 +100,7 @@
               <ul>
                 <li>Raspberry Pi (Linux), Python</li>
                 <li>OpenCV for image capture and preprocessing</li>
-                <li>Lightweight CNN (PyTorch / TensorFlow Lite)</li>
+                <li>Lightweight CNN (PyTorch)</li>
                 <li>GPIO control for actuators</li>
               </ul>
             </article>
@@ -115,22 +112,19 @@
               <span class="pill">Hardware Demo</span>
             </div>
             <div class="media-body">
-              <p>
-                Add a short hardware demo here: overview of the conveyor, camera,
-                and sorting mechanism, plus example classification overlays.
-              </p>
             </div>
-            <p class="media-caption">
-              Ideal for an embedded system walkthrough video or annotated photos
-              of the setup.
-            </p>
-            <div class="project-section">
-              <h3>Deployment Notes</h3>
-              <ul>
-                <li>Model quantization and input resizing for speed.</li>
-                <li>Simple watchdog and logging on the Pi.</li>
-                <li>Enclosure considerations for industrial environments.</li>
-              </ul>
+            <video autoplay muted loop playsinline>
+            <source src="../assets/videos/LemonSortingDep1.mp4" type="video/mp4" />
+            </video>
+            <div class="media-body">
+             <video autoplay muted loop playsinline>
+            <source src="../assets/videos/LemonSortingClass2.mp4" type="video/mp4" />
+            </video>
+            </div>
+            <div class="media-body">
+             <video autoplay muted loop playsinline>
+            <source src="../assets/videos/LemonSortingSort3.mp4" type="video/mp4" />
+            </video>
             </div>
           </aside>
         </div>
@@ -139,7 +133,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>&copy; <span id="year"></span> Siddhant Pani</span>
         <span>Raspberry Pi Fruit Segregation</span>
       </div>
     </footer>
