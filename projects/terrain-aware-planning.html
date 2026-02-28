@@ -84,8 +84,7 @@
                   a traversability cost for each cell.
                 </li>
                 <li>
-                  Use the cost map with a standard planner (e.g., A*, D*, or
-                  sampling-based) to produce terrain-aware paths.
+                  Use the cost map with a standard planner (A*) to produce terrain-aware paths.
                 </li>
               </ul>
             </article>
@@ -105,8 +104,7 @@
               <h2>Tech Stack</h2>
               <ul>
                 <li>Python / C++</li>
-                <li>Point cloud libraries (PCL, Open3D)</li>
-                <li>ROS / ROS 2 integration for live planning</li>
+                <li>Point cloud library (Open3D)</li>
               </ul>
             </article>
           </div>
@@ -117,22 +115,15 @@
               <span class="pill">3D Views</span>
             </div>
             <div class="media-body">
-              <p>
-                Use this area to show point cloud visualizations, cost map
-                overlays, and planned paths rendered in RViz or a custom viewer.
-              </p>
+              <video autoplay muted loop playsinline>
+            <source src="../assets/pathfinder.mp4" type="video/mp4" />
+            </video>
+            <div class="media-body">
+              <img 
+              src="../assets/pathfinder-console.jpeg" 
+              alt="Instance segmentation overlay on areca nuts"
+              />
             </div>
-            <p class="media-caption">
-              Embed static figures or fly-through videos demonstrating the
-              planner behavior over different terrains.
-            </p>
-            <div class="project-section">
-              <h3>Applications</h3>
-              <ul>
-                <li>Outdoor ground robots and UGVs.</li>
-                <li>Agricultural robotics and off-road navigation.</li>
-                <li>Exploration tasks with limited prior maps.</li>
-              </ul>
             </div>
           </aside>
         </div>
@@ -141,7 +132,7 @@
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <span>&copy; <span id="year"></span> Your Name</span>
+        <span>&copy; <span id="year"></span> Siddhant Pani</span>
         <span>Terrain-Aware Path Planning</span>
       </div>
     </footer>
